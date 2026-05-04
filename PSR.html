@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P.SREEKAR REDDY | Portfolio</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap");
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Inter", sans-serif;
+      background: #000;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    section { padding: 80px 10%; }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      z-index: 1000;
+    }
+    nav h1 {
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: #00ffe7;
+      text-shadow: 0 0 8px #00ffe7;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+    nav ul li a {
+      font-weight: 400;
+      transition: 0.3s;
+    }
+    nav ul li a:hover {
+      color: #00ffe7;
+      text-shadow: 0 0 8px #00ffe7;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      text-shadow: 0 0 15px #00ffe7;
+      animation: fadeInDown 1s ease forwards;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #aaa;
+      animation: fadeInUp 1s ease forwards;
+    }
+    .btn {
+      margin-top: 20px;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(135deg,#00ffe7,#0099ff);
+      color: #000;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 20px rgba(0,255,231,0.4);
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0,255,231,0.8);
+    }
+
+    /* ABOUT */
+    .about {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .about img {
+      width: 280px;
+      border-radius: 50%;
+      border: 3px solid #00ffe7;
+      box-shadow: 0 0 20px rgba(0,255,231,0.6);
+    }
+    .about-text {
+      flex: 1;
+    }
+    .about-text h3 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #00ffe7;
+    }
+    .about-text p {
+      color: #ccc;
+      font-size: 1.1rem;
+    }
+
+    /* SKILLS */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+    .skill {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      transition: 0.3s;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .skill:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 20px rgba(0,255,231,0.5);
+    }
+
+    /* PROJECTS */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+    .project {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+    .project:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 25px rgba(0,255,231,0.5);
+    }
+    .project h4 {
+      margin-bottom: 10px;
+      color: #00ffe7;
+    }
+    .project p {
+      font-size: 0.95rem;
+      color: #bbb;
+    }
+
+    /* CONTACT */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: auto;
+    }
+    .contact-form input, .contact-form textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+      font-size: 1rem;
+    }
+    .contact-form textarea {
+      min-height: 120px;
+      resize: none;
+    }
+    .contact-form button {
+      align-self: flex-start;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <h1>P SREEKAR REDDY</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Hi, I'm P SREEKAR REDDY 👋</h2>
+    <p>Building futuristic apps with passion & innovation</p>
+    <a href="#projects"><button class="btn">View My Work</button></a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about">
+      <img src="https://via.placeholder.com/280" alt="Profile">
+      <div class="about-text">
+        <h3>About Me</h3>
+        <p>
+          I’m P SREEKAR REDDY, a passionate developer who loves creating innovative
+          web applications, AI-powered tools, and futuristic designs. My goal
+          is to push technology forward with creativity and precision.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h3 style="text-align:center; margin-bottom:40px;">⚡ Skills</h3>
+    <div class="skills">
+      <div class="skill">HTML / CSS / JS</div>
+      <div class="skill">React / Firebase</div>
+      <div class="skill">Java / Spring Boot</div>
+      <div class="skill">AI / Chatbot Dev</div>
+      <div class="skill">UI / UX Design</div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h3 style="text-align:center; margin-bottom:40px;">🛠 Projects</h3>
+    <div class="projects">
+      <div class="project">
+        <h4>AI Chatbot</h4>
+        <p>A conversational assistant built with Groq API and modern UI.</p>
+      </div>
+      <div class="project">
+        <h4>Portfolio Website</h4>
+        <p>A Nothing-inspired futuristic portfolio showcasing my skills.</p>
+      </div>
+      <div class="project">
+        <h4>Defense Simulation</h4>
+        <p>Strategic defense scenarios with aircraft carriers & AI planning.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h3 style="text-align:center; margin-bottom:40px;">📩 Contact Me</h3>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message"></textarea>
+      <button class="btn">Send</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 P SREEKAR REDDY | Designed with ⚡ Futuristic Vision
+  </footer>
+</body>
+</html>
