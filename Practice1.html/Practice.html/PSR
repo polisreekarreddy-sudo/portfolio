@@ -1,0 +1,32 @@
+
+<!-- Profile Photo Upload Section -->
+<div class="card">
+  <h3>Profile Photo</h3>
+  <p class="small">Upload a profile picture — preview will show below.</p>
+
+  <!-- File input -->
+  <input id="photoInput" type="file" accept="image/*">
+
+  <!-- Preview area -->
+  <div id="photoPreview" style="margin-top:10px;">
+    <img id="previewImg" src="" alt="Preview" style="max-width:120px; border-radius:50%; display:none;">
+  </div>
+</div>
+
+<script>
+  // Handle file input change
+  const photoInput = document.getElementById("photoInput");
+  const previewImg = document.getElementById("previewImg");
+
+  photoInput.addEventListener("change", function(event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        previewImg.src = e.target.result;
+        previewImg.style.display = "block";
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+</script>
